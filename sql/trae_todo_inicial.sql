@@ -11,12 +11,12 @@ select
     clientes.lastname,''',''',
     direccion.phone,''',''',
     provincia.name,''',',
-    detalle.id_order_detail,',''',
-    detalle.product_reference,''',''',
-    detalle.product_name,''',',
-    detalle.unit_price_tax_incl,',',
-    detalle.product_quantity,',',
-    detalle.total_price_tax_incl,',',
+   coalesce(detalle.id_order_detail,'0'),',''',
+   coalesce(detalle.product_reference,'-'),''',''',
+    coalesce(detalle.product_name,'-'),''',',
+    coalesce(detalle.unit_price_tax_incl,'0'),',',
+    coalesce(detalle.product_quantity,'0'),',',
+    coalesce(detalle.total_price_tax_incl,'0'),',',
     pedidos.current_state,
 	');') as ''
 from regalonatural.ps_orders pedidos
