@@ -231,3 +231,4 @@ fieldset[disabled] .btn-primary.active {
 celda{
 	background-color: #fff;
 }
+@media print{@page {size: landscape}}

@@ -18,6 +18,9 @@ require_once ('../model/datospedidos.php');
             <div class="container text-center">
                 <h2>Información Pedido: <?php echo $id_pedido ?></h2>
             </div><!--/.container-->
+            <div class="container text-center">
+                <button class="btn-primary" onclick="window.print()"> Imprimir </button>
+            </div><!--/.container-->
 
             <div class="card-body">
                 <div class="table-responsive">
@@ -141,10 +144,11 @@ require_once ('../model/datospedidos.php');
 
  
 <?php
-echo "<script> window.onload=function() {
-        window.print();
-    };</script>";
+//echo "<script> window.onload=function() {
+//        window.print();
+//    };</script>";
 
 require_once('../partials/cabecerapedidosFin.html');
 
 ?>
+
