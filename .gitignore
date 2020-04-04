@@ -1,6 +1,6 @@
 *.idea/*
 .idea/
 /logs/*
-*/logs*
+*/logs/*
 */bbdd*/
 
