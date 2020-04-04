@@ -6795,6 +6795,9 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important;
-  }
+    }
 }
+@media print{@page {size: A4 landscape}}
+
+
 /*# sourceMappingURL=bootstrap.css.map */
