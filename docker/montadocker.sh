@@ -1,5 +1,7 @@
 #docker run -d -p 7070:80 -p 7071:3306  -v /home/UTILES/Analisis-Pedidos/www:/var/www/html -v /home/UTILES/Analisis-Pedidos/bbdd:/var/lib/mysql --name mysql-analisis-pedidos -h analisispedidos vicsoft01/ubuntu18.04-apache2.2-php7.3.11
 
+mkdir -p ../bbdd
+
 docker stop analisis-pedidos-phpMyAdmin
 docker rm  analisis-pedidos-phpMyAdmin
 docker stop analisis-pedidos-www
