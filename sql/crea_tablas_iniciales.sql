@@ -1,5 +1,3 @@
-create database RN_AnalisisPedidos;
-
 
 create table RN_AnalisisPedidos.RAW_Pedidos (
 fecha datetime,
