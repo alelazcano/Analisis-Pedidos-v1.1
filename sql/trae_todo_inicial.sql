@@ -22,12 +22,18 @@ select
 from regalonatural.ps_orders pedidos
 left outer join regalonatural.ps_customer clientes
 on pedidos.id_customer=clientes.id_customer
+inner join (
+    select id_customer as min_id_customer, min(id_address) as min_direc
+    from regalonatural.ps_address
+    group by min_id_customer) as minima_direc
+on clientes.id_customer=minima_direc.min_id_customer
 inner join regalonatural.ps_address direccion
-on clientes.id_customer=direccion.id_customer
+on minima_direc.min_id_customer=direccion.id_customer
+and minima_direc.min_direc=direccion.id_address
 inner join regalonatural.ps_state provincia
 on direccion.id_state=provincia.id_state
 left outer join regalonatural.ps_order_detail detalle
 on pedidos.id_order=detalle.id_order
 where direccion.deleted=0
-order by pedidos.id_order DESC;
+order by pedidos.id_order DESC
 
