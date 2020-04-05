@@ -17,7 +17,8 @@ precio_unitario_producto decimal(20,6),
 cantidad_producto int(10),
 precio_total_pedido decimal(20,6),
 estado_pedido int(10),
-mensaje_cliente varchar(255)
+mensaje_cliente varchar(255),
+nota varchar(255)
 );
 
 drop table if exists RN_AnalisisPedidos.Cabeceras_Pedidos;
@@ -32,7 +33,8 @@ telefono_cliente varchar(32),
 provincia_cliente varchar(64),
 precio_total_pedido decimal(20,6),
 estado_pedido int(10),
-mensaje_cliente varchar(255)
+mensaje_cliente varchar(255),
+nota varchar(255)
 );
 
 drop table if exists RN_AnalisisPedidos.Detalle_Pedidos;

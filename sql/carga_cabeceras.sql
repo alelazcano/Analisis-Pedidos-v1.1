@@ -9,9 +9,10 @@ telefono_cliente,
 provincia_cliente,
 total_pedido,
 estado_pedido,
-mensaje_cliente
+mensaje_cliente,
+nota
 FROM RN_AnalisisPedidos.RAW_Pedidos
 where (fecha,id_pedido) not in (select fecha, id_pedido from RN_AnalisisPedidos.Cabeceras_Pedidos)
-group by 1,2,3,4,5,6,7,8,9,10
+group by 1,2,3,4,5,6,7,8,9,10,11
 order by fecha desc;
 

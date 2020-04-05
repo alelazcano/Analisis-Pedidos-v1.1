@@ -1,4 +1,4 @@
-chmod +x /home/MTTO-TIENDA/Analisis-Pedidos/docker/montadocker.sh
+#!/usr/bin/env bash
 chmod +x /home/MTTO-TIENDA/Analisis-Pedidos/inicializa_sistema.sh
 chmod +x /home/MTTO-TIENDA/Analisis-Pedidos/recupera_pedidos.sh
 
