@@ -92,6 +92,8 @@ require_once ('../model/datospedidos.php');
                                 echo "<td>" . "</td>";
                                 echo "</tr>";
                             }
+                            $notas_cliente=$registro['mensaje_cliente'];
+                            $notas_internas=$registro['nota'];
                         ?>
                        </tbody>
                     </table>
@@ -150,11 +152,8 @@ require_once ('../model/datospedidos.php');
                     </tfoot>
                     <tbody>
                     <tr>
-                        <td>Por favor, llamar antes de la entrega, si no estamos en casa dejarlo en la
-                            case del vecino, es la puerta azul con el pomo dorado que tiene unas
-                            cortinas verdes muy feas. Gracias</td>
-                        <td>Este pedido es para entregar a finales de abril. Indicar en el pedido
-                            que la entrega tiene que realizarse en mano. No lleva contrareembolso</td>
+                        <td><?php echo $notas_cliente ?></td>
+                        <td><?php echo $notas_internas ?></td>
                     </tr>
 
                     </tbody>
