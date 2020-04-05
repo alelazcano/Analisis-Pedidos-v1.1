@@ -64,7 +64,8 @@ Desde
 ```bash
 ./01-Instala.sh
 ```
-
-
-
+### Crontab para ejecutar periodicamente ### 
+```bash
+*/25 * * * * /bin/bash /home/MTTO-TIENDA/Analisis-Pedidos/recupera_pedidos.sh
+```
 
