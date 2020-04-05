@@ -17,7 +17,9 @@ select
     coalesce(detalle.unit_price_tax_incl,'0'),',',
     coalesce(detalle.product_quantity,'0'),',',
     coalesce(detalle.total_price_tax_incl,'0'),',',
-    pedidos.current_state,
+    pedidos.current_state,',''',
+    coalesce (mensaje.message,''),'''',
+
 	');') as ''
 from regalonatural.ps_orders pedidos
 left outer join regalonatural.ps_customer clientes
@@ -34,6 +36,10 @@ inner join regalonatural.ps_state provincia
 on direccion.id_state=provincia.id_state
 left outer join regalonatural.ps_order_detail detalle
 on pedidos.id_order=detalle.id_order
+left outer join regalonatural.ps_customer_thread thread
+on thread.id_customer=clientes.id_customer
+left outer join regalonatural.ps_customer_message mensaje
+on thread.id_customer_thread=mensaje.id_customer_thread
 where direccion.deleted=0
 order by pedidos.id_order DESC
 

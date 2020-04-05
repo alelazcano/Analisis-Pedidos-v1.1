@@ -95,9 +95,11 @@ require_once ('../model/datospedidos.php');
                         ?>
                        </tbody>
                     </table>
-                    <div class="container text-center">
-                        <h2>Detalles Pedido</h2>
-                    </div><!--/.container-->
+<!--                    <div class="container text-center">
+                            <h2>Detalles Pedido</h2>
+                        </div>
+-->
+                                        <!--/.container-->
 
                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
@@ -133,7 +135,34 @@ require_once ('../model/datospedidos.php');
 
 
                     </table>
+
+
+
                 </div>
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Notas Cliente</th>
+                        <th>Notas Privadas</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    </tfoot>
+                    <tbody>
+                    <tr>
+                        <td>Por favor, llamar antes de la entrega, si no estamos en casa dejarlo en la
+                            case del vecino, es la puerta azul con el pomo dorado que tiene unas
+                            cortinas verdes muy feas. Gracias</td>
+                        <td>Este pedido es para entregar a finales de abril. Indicar en el pedido
+                            que la entrega tiene que realizarse en mano. No lleva contrareembolso</td>
+                    </tr>
+
+                    </tbody>
+
+
+
+
+                </table>
             </div>
 
         </div>

@@ -8,9 +8,10 @@ concat(nombre_cliente, ' ', apellidos_cliente),
 telefono_cliente,
 provincia_cliente,
 total_pedido,
-estado_pedido
+estado_pedido,
+mensaje_cliente
 FROM RN_AnalisisPedidos.RAW_Pedidos
 where (fecha,id_pedido) not in (select fecha, id_pedido from RN_AnalisisPedidos.Cabeceras_Pedidos)
-group by 1,2,3,4,5,6,7,8,9
+group by 1,2,3,4,5,6,7,8,9,10
 order by fecha desc;
 
