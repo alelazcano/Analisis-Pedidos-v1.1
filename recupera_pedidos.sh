@@ -33,7 +33,7 @@ echo "Contenedor BBDD ORIGEN: ${contenedor_mysql_origen}"
 
 echo "Trae todo inicial...> " >> /home/MTTO-TIENDA/Analisis-Pedidos/logs/log_${ID_UNICO_PROCESO}
 
-docker exec -i ${contenedor_mysql_origen} /usr/bin/mysql -u root --password=vmsn2004 regalonatural --batch --raw < ${ruta_app}//sql/trae_todo_inicial.sql > ${ruta_app}/datos/extraccion.txt
+docker exec -i ${contenedor_mysql_origen} /usr/bin/mysql -u root --password=vmsn2004 regalonatural --batch --raw < ${ruta_app}/sql/trae_todo_inicial.sql > ${ruta_app}/datos/extraccion.txt
 echo "Borra RAW.> " >> /home/MTTO-TIENDA/Analisis-Pedidos/logs/log_${ID_UNICO_PROCESO}
 docker exec -i ${contenedor_mysql} /usr/bin/mysql -u root --password=vmsn2004 RN_AnalisisPedidos --batch --raw < ${ruta_app}/sql/borra_raw.sql
 

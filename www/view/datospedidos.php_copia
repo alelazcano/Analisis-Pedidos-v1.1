@@ -74,23 +74,10 @@ foreach ($datos->resultado as $registro){
             $estado_pedido="Error Pago";
             echo "<td style='background-color: #ffe600;color: black;font-size: small'>" . $estado_pedido . "</td>"; // Error en Pago
             break;
-        case 9:
-            $estado_pedido="Almacenado.Pdte Envío";
-            echo "<td style='background-color:#FC6EF1 ;color: white;font-size: small'>" . $estado_pedido . "</td>"; // Error en Pago
-            break;
-        case 7:
-            $estado_pedido="Preparar más tarde";
-            echo "<td style='background-color:#E44545 ;color: white;font-size: small'>" . $estado_pedido . "</td>"; // Error en Pago
-            break;
-        case 18:
-            $estado_pedido="Hecho.Pdte Recogida";
-            echo "<td style='background-color:#45B1E4 ;color: white;font-size: small'>" . $estado_pedido . "</td>"; // Error en Pago
-            break;
         case 10:
             $estado_pedido="Pdte. Transferencia";
             echo "<td style='background-color: #9ae4fc;color: black;font-size: small'>" . $estado_pedido . "</td>"; // Pdte. Transf.
             break;
-
 
     }
 
